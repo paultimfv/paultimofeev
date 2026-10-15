@@ -68,6 +68,13 @@ export const experiments: Project[] = [
     live: "https://x402-anytoken.vercel.app",
     repo: "https://github.com/paultimfv/x402-anytoken",
   },
+  {
+    title: "memebot",
+    summary: "An experiment in trading memecoins in the first minute after launch: skip likely rugs, buy small at tiny market caps, sell when wallet activity turns. Work in progress; the hosted demo runs the strategy on a simulated launchpad.",
+    tags: ["TypeScript", "Simulation"],
+    live: "https://memebot-zeta.vercel.app",
+    repo: "https://github.com/paultimfv/memebot",
+  },
 ];
 
 // All data work, listed under the project cards. Grouped by year (newest first), then sorted by date.
