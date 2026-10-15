@@ -18,6 +18,13 @@ export type Project = { title: string; summary: string; tags: string[]; live?: s
 
 export const projects: Project[] = [
   {
+    title: "x402 on Base",
+    summary: "x402 USDC payments on Base across four sample weeks, decoded from raw logs: who gets paid, by whom, at what price, and through which facilitator.",
+    tags: ["Python", "DuckDB", "Infura", "Next.js"],
+    live: "https://x402-activity.paultimofeev.com",
+    repo: "https://github.com/paultimfv/x402-base-activity",
+  },
+  {
     title: "ORE",
     summary: "Every ORE mining round and buyback since October 2025, decoded from Solana: SOL deployed, protocol revenue, ORE minted and burned.",
     tags: ["Python", "Helius", "Next.js"],
