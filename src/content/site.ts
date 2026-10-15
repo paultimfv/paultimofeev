@@ -18,6 +18,18 @@ export type Project = { title: string; summary: string; tags: string[]; live?: s
 
 export const projects: Project[] = [
   {
+    title: "ORE",
+    summary: "Every ORE mining round and buyback since October 2025, decoded from Solana: SOL deployed, protocol revenue, ORE minted and burned.",
+    tags: ["Python", "Helius", "Next.js"],
+    live: "https://ore-dashboard-beige.vercel.app",
+  },
+  {
+    title: "Collector Crypt",
+    summary: "Gacha pack sales, card buybacks and the CARDS buyback and burn, from every stablecoin transfer through the gacha wallet on Solana, Base and Robinhood Chain.",
+    tags: ["Python", "Helius", "Alchemy", "Next.js"],
+    live: "https://collector-crypt-dashboard-delta.vercel.app",
+  },
+  {
     title: "Laso Finance",
     summary: "Stablecoin deposits across 7 chains and x402 agent payments, pulled from chain data and checked against Laso's own reported volume.",
     tags: ["Python", "Alchemy", "Helius", "Blockscout", "Next.js"],
