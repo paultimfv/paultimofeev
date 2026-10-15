@@ -22,6 +22,7 @@ export const projects: Project[] = [
     summary: "Every ORE mining round and buyback since October 2025, decoded from Solana: SOL deployed, protocol revenue, ORE minted and burned.",
     tags: ["Python", "Helius", "Next.js"],
     live: "https://ore-dashboard-beige.vercel.app",
+    repo: "https://github.com/paultimfv/ore-research",
   },
   {
     title: "Collector Crypt",
