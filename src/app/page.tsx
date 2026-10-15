@@ -80,8 +80,13 @@ export default function Home() {
       </section>
 
       <section className="mt-20">
-        <h2 className="text-[20px] font-semibold">Experiments</h2>
-        <p className="mt-1 text-[14px] text-ink-2">Prototypes I build to test an idea.</p>
+        <h2 className="text-[20px] font-semibold">All writing</h2>
+        <Archive pieces={writing} />
+      </section>
+
+      <section className="mt-20">
+        <h2 className="text-[20px] font-semibold">Projects</h2>
+        <p className="mt-1 text-[14px] text-ink-2">Demos and experiments, built to test ideas.</p>
         <div className="mt-5 grid gap-4 md:grid-cols-2">
           {experiments.map((p) => (
             <article key={p.title} className="border border-line p-5">
@@ -95,11 +100,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="mt-20">
-        <h2 className="text-[20px] font-semibold">All writing</h2>
-        <Archive pieces={writing} />
       </section>
     </>
   );

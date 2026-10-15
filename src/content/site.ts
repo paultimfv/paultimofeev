@@ -59,7 +59,7 @@ export const projects: Project[] = [
   },
 ];
 
-// Experiments: prototypes built to test an idea. Shown after the Data section.
+// Projects: demos and experiments. Shown at the bottom of the Work page, after All writing.
 export const experiments: Project[] = [
   {
     title: "x402 any-token",
