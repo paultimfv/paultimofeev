@@ -60,7 +60,7 @@ export const dataWork: DataWork[] = [
   { title: "x402 Exploratory Analysis", date: "2026", kind: "Dune", url: "https://dune.com/ptmfv/x402-exploratory-analysis" },
   { title: "x402 Payments Breakdown", date: "2026-08", kind: "Python", url: "https://github.com/paultimfv/x402-payments-breakdown/blob/main/x402_payments_overview.ipynb" },
   { title: "x402 Unit Economics", date: "2026-08", kind: "Python", url: "https://github.com/paultimfv/x402-unit-economics" },
-  { title: "Crypto Research Skills for Claude", date: "2026-05", kind: "Claude skills", url: "https://github.com/paultimfv/claude-research-skills" },
+  { title: "Crypto Research Skills for Claude", date: "2026-05", kind: "Claude skills", url: "https://github.com/paultimfv/claude-crypto-research-skills" },
   { title: "x402 Facilitator Concentration", date: "2026-04", kind: "Python", url: "https://github.com/paultimfv/x402-facilitator-concentration-" },
   { title: "x402 Use Cases", date: "2026-04", kind: "Python", url: "https://github.com/paultimfv/x402-use-cases" },
   { title: "How Organic Is x402?", date: "2026-04", kind: "Python", url: "https://github.com/paultimfv/how-organic-is-x402" },
