@@ -29,6 +29,7 @@ export const projects: Project[] = [
     summary: "Gacha pack sales, card buybacks and the CARDS buyback and burn, from every stablecoin transfer through the gacha wallet on Solana, Base and Robinhood Chain.",
     tags: ["Python", "Helius", "Alchemy", "Next.js"],
     live: "https://collector-crypt-dashboard-delta.vercel.app",
+    repo: "https://github.com/paultimfv/collector-crypt-research",
   },
   {
     title: "Laso Finance",
