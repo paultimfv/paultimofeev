@@ -47,6 +47,32 @@ export const projects: Project[] = [
   },
 ];
 
+// All data work, listed under the project cards. Grouped by year (newest first), then sorted by date.
+// Dates as "YYYY" or "YYYY-MM". Set `year` to override the group heading (e.g. a span like "2024–2025").
+export type DataWork = { title: string; date: string; year?: string; kind: "Dune" | "Python" | "Claude skills"; url: string };
+
+export const dataWork: DataWork[] = [
+  { title: "Maple Finance Deep-Dive", date: "2026", kind: "Dune", url: "https://dune.com/ptimfv/maple-finance-business-analysis-new" },
+  { title: "Maple Finance x Robinhood", date: "2026", kind: "Dune", url: "https://dune.com/ptimfv/maplexrobinhood" },
+  { title: "Robinhood Earn", date: "2026", kind: "Dune", url: "https://dune.com/ptimfv/robinhood-earn" },
+  { title: "Maple Finance Protocol Overview (Pools)", date: "2026", kind: "Dune", url: "https://dune.com/ptmfv/maple-pools-overview" },
+  { title: "Maple V1 (Migrated)", date: "2026", kind: "Dune", url: "https://dune.com/ptmfv/maple-finance" },
+  { title: "x402 Exploratory Analysis", date: "2026", kind: "Dune", url: "https://dune.com/ptmfv/x402-exploratory-analysis" },
+  { title: "x402 Payments Breakdown", date: "2026-08", kind: "Python", url: "https://github.com/paultimfv/x402-payments-breakdown/blob/main/x402_payments_overview.ipynb" },
+  { title: "x402 Unit Economics", date: "2026-08", kind: "Python", url: "https://github.com/paultimfv/x402-unit-economics" },
+  { title: "Crypto Research Skills for Claude", date: "2026-05", kind: "Claude skills", url: "https://github.com/paultimfv/claude-research-skills" },
+  { title: "x402 Facilitator Concentration", date: "2026-04", kind: "Python", url: "https://github.com/paultimfv/x402-facilitator-concentration-" },
+  { title: "x402 Use Cases", date: "2026-04", kind: "Python", url: "https://github.com/paultimfv/x402-use-cases" },
+  { title: "How Organic Is x402?", date: "2026-04", kind: "Python", url: "https://github.com/paultimfv/how-organic-is-x402" },
+  { title: "Photo Finish", date: "2024", year: "2024–2025", kind: "Dune", url: "https://dune.com/ptmfv/photo-finish" },
+  { title: "Pump", date: "2024", year: "2024–2025", kind: "Dune", url: "https://dune.com/ptmfv/pump" },
+  { title: "Jupiter Product Analysis", date: "2024", year: "2024–2025", kind: "Dune", url: "https://dune.com/ptmfv/jupiter-product-analysis" },
+  { title: "Solana DEX Landscape 2023 Review", date: "2024", year: "2024–2025", kind: "Dune", url: "https://dune.com/ptmfv/solana-dex-landscape-2023-review" },
+  { title: "Top 8 TVL Portfolio Analysis", date: "2023-11", kind: "Python", url: "https://github.com/paultimfv/Top-8-TVL-Portfolio-Analysis" },
+  { title: "Crypto Interest Over Time", date: "2023-11", kind: "Python", url: "https://github.com/paultimfv/Crypto-Interest-Over-Time" },
+  { title: "Covid Stonks Analysis", date: "2023-10", kind: "Python", url: "https://github.com/paultimfv/Covid-Stonks-Analysis" },
+];
+
 // Timeline. Dates as "YYYY" or "YYYY-MM". A year-only end runs to the end of that year. Leave end empty for current.
 export type Entry = { kind: "work" | "education"; org: string; title?: string; start: string; end?: string };
 

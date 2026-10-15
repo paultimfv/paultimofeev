@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site, projects } from "@/content/site";
+import { site, projects, dataWork } from "@/content/site";
 import writing from "@/content/writing.json";
 import featured from "@/content/featured.json";
 import Archive from "@/components/archive";
@@ -52,6 +52,29 @@ export default function Home() {
                 {p.repo && <a href={p.repo} className="underline">Code</a>}
               </div>
             </article>
+          ))}
+        </div>
+
+        <h3 className="mt-12 text-[16px] font-semibold">All data work</h3>
+        <p className="mt-1 text-[14px] text-ink-2">Dune dashboards, Python notebooks and research tooling, going back to 2023.</p>
+        <div className="mt-6 space-y-10">
+          {[...new Set(dataWork.map((d) => d.year ?? d.date.slice(0, 4)))].sort((a, b) => b.localeCompare(a)).map((y) => (
+            <section key={y}>
+              <h4 className="font-mono text-[13px] text-muted">{y}</h4>
+              <ul className="mt-3 divide-y divide-line border-y border-line">
+                {dataWork
+                  .filter((d) => (d.year ?? d.date.slice(0, 4)) === y)
+                  .sort((a, b) => b.date.localeCompare(a.date))
+                  .map((d) => (
+                    <li key={d.url}>
+                      <a href={d.url} className="grid gap-1 py-3.5 hover:bg-raised md:grid-cols-[1fr_auto] md:items-baseline md:gap-6">
+                        <span className="text-[15px]">{d.title}</span>
+                        <span className="text-[12px] text-muted">{d.kind}</span>
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+            </section>
           ))}
         </div>
       </section>
