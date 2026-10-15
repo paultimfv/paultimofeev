@@ -1,0 +1,617 @@
+[
+ {
+  "title": "Understanding HTTP 402",
+  "date": "2026-05-28",
+  "url": "https://pt1mfv.notion.site/Understanding-HTTP-402-3e492316a70d80258e1bd85b920f4493",
+  "source": "Shoal Research",
+  "topics": [
+   "ai",
+   "stablecoins"
+  ],
+  "with": []
+ },
+ {
+  "title": "x402: When Machines Move Money",
+  "date": "2026-03-24",
+  "url": "https://pt1mfv.notion.site/x402-When-Machines-Move-Money-3e492316a70d80609de9f78816242b15",
+  "source": "Shoal Research",
+  "topics": [
+   "ai",
+   "stablecoins"
+  ],
+  "with": []
+ },
+ {
+  "title": "The Robotics Data Layer",
+  "date": "2026-08-18",
+  "url": "https://pt1mfv.notion.site/The-Robotics-Data-Layer-3e492316a70d806fa258f18a92bb8b5b",
+  "source": "Shoal Research",
+  "topics": [
+   "ai"
+  ],
+  "with": [
+   "Gabe Tramble"
+  ]
+ },
+ {
+  "title": "Circle's Role In The Agentic Economy",
+  "date": "2026-08-07",
+  "url": "https://pt1mfv.notion.site/Circle-s-Role-In-The-Agentic-Economy-3e492316a70d8099b95cd2ee715affe9",
+  "source": "Shoal Research",
+  "topics": [
+   "ai",
+   "stablecoins"
+  ],
+  "with": [
+   "Gabe Tramble"
+  ]
+ },
+ {
+  "title": "How AI Is Breaking The Internet Economy",
+  "date": "2026-09-09",
+  "url": "https://pt1mfv.notion.site/How-AI-Is-Breaking-The-Internet-Economy-3e492316a70d802a80f3e54471a8aa5d",
+  "source": "Shoal Research",
+  "topics": [
+   "ai"
+  ],
+  "with": [
+   "Gabe Tramble"
+  ]
+ },
+ {
+  "title": "Intention Is All You Need",
+  "date": "2026-05-12",
+  "url": "https://x.com/paultimofeev_/status/2054252193427898808",
+  "source": "X",
+  "topics": [
+   "ai"
+  ],
+  "with": []
+ },
+ {
+  "title": "Global Rails For The Future of Money Movement (Plasma report)",
+  "date": "2025-09-25",
+  "url": "https://www.shoal.gg/p/global-rails-for-the-future-of-money",
+  "source": "Shoal Research",
+  "topics": [
+   "stablecoins"
+  ],
+  "with": [
+   "0xyanshu"
+  ]
+ },
+ {
+  "title": "Tokenized Debt and The New Monetary Order (OpenEden report)",
+  "date": "2025-10-14",
+  "url": "https://www.shoal.gg/p/tokenized-debt-and-the-new-monetary",
+  "source": "Shoal Research",
+  "topics": [
+   "stablecoins"
+  ],
+  "with": []
+ },
+ {
+  "title": "Building The Real Time DeFi Stack (Flying Tulip report)",
+  "date": "2025-10-22",
+  "url": "https://www.shoal.gg/p/building-the-real-time-defi-stack",
+  "source": "Shoal Research",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Building Crypto's Everything App (DeFi.App report)",
+  "date": "2025-10-24",
+  "url": "https://www.shoal.gg/p/building-cryptos-everything-app",
+  "source": "Shoal Research",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Building DeFi's Investment Bank (Turtle Club report)",
+  "date": "2025-10-29",
+  "url": "https://www.shoal.gg/p/building-defis-investment-bank",
+  "source": "Shoal Research",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Federated Learning On The Blockchain (FLock report)",
+  "date": "2025-08-22",
+  "url": "https://www.shoal.gg/p/federated-learning-meets-blockchain",
+  "source": "Shoal Research",
+  "topics": [
+   "ai"
+  ],
+  "with": []
+ },
+ {
+  "title": "Everything's Aggregator",
+  "date": "2025-08-30",
+  "url": "https://x.com/paultimofeev_/status/1961806213231808833",
+  "source": "X",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Restaking on Solana: A Deep Dive",
+  "date": "2025-01-07",
+  "url": "https://www.shoal.gg/p/the-rise-of-restaking-on-solana",
+  "source": "Shoal Research",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": [
+   "Sitesh",
+   "Gabe Tramble"
+  ]
+ },
+ {
+  "title": "The State of SVM Expansion",
+  "date": "2025-03-19",
+  "url": "https://www.hyperlane.xyz/post/the-state-of-svm-expansion",
+  "source": "Hyperlane",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "The State of Stablecoin Interoperability",
+  "date": "2025-10-03",
+  "url": "https://x.com/hyperlane/status/1974152400807276762",
+  "source": "X",
+  "topics": [
+   "stablecoins",
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "HyperFlow: A Collaborative Intent Model",
+  "date": "2025-03-17",
+  "url": "https://www.hyperlane.xyz/post/hyperflow-collaborative-intents-powered-by-hyperlane",
+  "source": "Hyperlane",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "Why Do Agents Need Interop?",
+  "date": "2025-01-27",
+  "url": "",
+  "source": "Hyperlane",
+  "topics": [
+   "ai",
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "Hyperlane As The Open Interop Framework for Agents",
+  "date": "2025-01-28",
+  "url": "https://www.hyperlane.xyz/post/hyperlane-is-the-open-framework-connecting-the-agentic-economy",
+  "source": "Hyperlane",
+  "topics": [
+   "ai",
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "The Emerging AltVM Landscape",
+  "date": "2025-01-16",
+  "url": "https://www.hyperlane.xyz/post/the-emerging-altvm-landscape",
+  "source": "Hyperlane",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "Why Intents and GMPs Aren't Mutually Exclusive",
+  "date": "2024-12-09",
+  "url": "https://www.hyperlane.xyz/post/why-we-need-both-intents-and-messaging",
+  "source": "Hyperlane",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "The SVM Landscape Beyond Solana",
+  "date": "2024-10-10",
+  "url": "https://www.hyperlane.xyz/post/svm-expansion-the-landscape-beyond-solana",
+  "source": "Hyperlane",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "Modular Cross-Chain Security",
+  "date": "2024-12-06",
+  "url": "https://www.hyperlane.xyz/post/modular-security-with-hyperlane",
+  "source": "Hyperlane",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "The Case for Compute DePINs",
+  "date": "2024-06-11",
+  "url": "https://www.shoal.gg/p/the-case-for-compute-depins",
+  "source": "Shoal Research",
+  "topics": [
+   "infrastructure",
+   "ai"
+  ],
+  "with": []
+ },
+ {
+  "title": "Jupiter Investment Thesis",
+  "date": "2024-01-18",
+  "url": "https://www.shoal.gg/p/jupiter-exchange-solanas-dex-aggregator",
+  "source": "Shoal Research",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Parallel Execution Blockchains Report",
+  "date": "2024-05-01",
+  "url": "https://www.shoal.gg/p/parallel-execution-the-next-generation",
+  "source": "Shoal Research",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": [
+   "Mike Jin",
+   "Gabe Tramble"
+  ]
+ },
+ {
+  "title": "Exploring Solana's MEV Landscape",
+  "date": "",
+  "url": "https://paultimofeev.medium.com/latency-and-profits-mev-on-solana-defe9a05011a",
+  "source": "Medium",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "A Primer on Market Makers & Aori",
+  "date": "",
+  "url": "https://mirror.xyz/0xA334D7eF5692e067A0287AB244b99AEF4Ab35E21/B3vXx-trc4x6MeJXgPE4ELsIaCHpA8R5265mYCOI2hk",
+  "source": "Mirror",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Aperture Finance Case Study",
+  "date": "2024-05-16",
+  "url": "https://www.shoal.gg/p/the-convergence-of-ai-defi-and-intents",
+  "source": "Shoal Research",
+  "topics": [
+   "defi",
+   "ai"
+  ],
+  "with": [
+   "Gabe Tramble",
+   "0xpbl"
+  ]
+ },
+ {
+  "title": "MEV-Protection with DEX Aggregators",
+  "date": "2023-11-20",
+  "url": "https://www.shoal.gg/p/mev-protection-dex-and-aggregator",
+  "source": "Shoal Research",
+  "topics": [
+   "defi",
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "The Evolution of Blockchain Interoperability",
+  "date": "2023-07-12",
+  "url": "https://paultimofeev.substack.com/p/the-evolution-of-blockchain-interoperability",
+  "source": "Substack",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "Fast & Faster: The Visa x Solana Partnership",
+  "date": "2023-09-21",
+  "url": "https://paultimofeev.substack.com/p/fast-and-faster-solana-x-visa",
+  "source": "Substack",
+  "topics": [
+   "stablecoins"
+  ],
+  "with": []
+ },
+ {
+  "title": "Cosmos IBC",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/Cosmos-IBC-e14e342f9e3b42af879bed035ede541a",
+  "source": "Notion",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "Building Better Bridges",
+  "date": "2023-08-09",
+  "url": "https://www.bankless.com/building-better-bridges",
+  "source": "Bankless",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "A Primer on LayerZero",
+  "date": "2023-07-05",
+  "url": "https://www.bankless.com/tracking-the-layerzero-opportunity",
+  "source": "Bankless",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "Building Sticky Liquidity in DeFi",
+  "date": "",
+  "url": "",
+  "source": "",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Proposer Builder Separation",
+  "date": "2023-05-24",
+  "url": "https://www.bankless.com/eth-power-balancing",
+  "source": "Bankless",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "Deep Dive: jGLP Vaults",
+  "date": "2023-02-13",
+  "url": "https://paultimofeev.substack.com/p/jonesdao-and-the-quest-for-jglp-domination",
+  "source": "Substack",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "APR vs APY",
+  "date": "2023-02-16",
+  "url": "https://twitter.com/pt1mfv_/status/1626270688280739840",
+  "source": "X",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "The Ultimate Guide To Altitude DeFi",
+  "date": "2023-02-25",
+  "url": "https://twitter.com/pt1mfv_/status/1629292085349154817",
+  "source": "X",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Betting on Stablecoins with Y2K Finance",
+  "date": "2023-04-04",
+  "url": "https://paultimofeev.substack.com/p/betting-on-stablecoins-with-y2k-finance",
+  "source": "Substack",
+  "topics": [
+   "stablecoins",
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Building Sticky DeFi with Berachain",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/Building-Sticky-DeFi-with-Berachain-eec509223ade4d9f87a0e475ea0d5238",
+  "source": "Notion",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Exploring The Beraconomy",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/Exploring-The-Beraconomy-36845ae0612d4cf0ac22835a93ac8d63",
+  "source": "Notion",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "$GHO: Aave Stablecoin",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/GHO-Aave-Stablecoin-18b4d7e7981a4a01b191cee059c1acd5",
+  "source": "Notion",
+  "topics": [
+   "stablecoins"
+  ],
+  "with": []
+ },
+ {
+  "title": "$crvUSD: Curve Finance Stablecoin",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/crvUSD-Curve-Finance-Stablecoin-01adb63cb5214774b76b7a4c7e0ca002",
+  "source": "Notion",
+  "topics": [
+   "stablecoins"
+  ],
+  "with": []
+ },
+ {
+  "title": "CLMMs",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/CLMMs-1cbe4db8d8d5438a93923d8f2f20f6b5",
+  "source": "Notion",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Kamino Finance",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/Kamino-Finance-4c373b0029814c788f279a7284231a4b",
+  "source": "Notion",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Neutra Finance: nGLP",
+  "date": "",
+  "url": "https://pt1mfv.notion.site/Neutra-Finance-nGLP-c8e3a2973180406480ff77781a41ef6f",
+  "source": "Notion",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Drip by Dcaf Labs",
+  "date": "2022-11-08",
+  "url": "https://paultimofeev.substack.com/p/drip-by-dcaf-labs",
+  "source": "Substack",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "PBS Thread",
+  "date": "",
+  "url": "https://typefully.com/pt1mfv_/reshaping-the-mev-conomy-with-pbs-oIZVmL0",
+  "source": "X",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "jGLP Thread",
+  "date": "2023-02-12",
+  "url": "https://twitter.com/pt1mfv_/status/1624576332884774913",
+  "source": "X",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "JonesDAO Thread",
+  "date": "2023-02-02",
+  "url": "https://twitter.com/pt1mfv_/status/1620963507100590080",
+  "source": "X",
+  "topics": [
+   "defi"
+  ],
+  "with": []
+ },
+ {
+  "title": "Arbitrum Airdrop: Why Token?",
+  "date": "2023-03-21",
+  "url": "https://twitter.com/pt1mfv_/status/1638170680993943553",
+  "source": "X",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "Building The Encrypted ICO With Zama",
+  "date": "2026-01-15",
+  "url": "https://www.shoal.gg/p/building-the-encrypted-ico-with-zama",
+  "source": "Shoal Research",
+  "topics": [
+   "infrastructure"
+  ],
+  "with": []
+ },
+ {
+  "title": "Bringing Macro Markets Onchain with Ostium",
+  "date": "2024-09-12",
+  "url": "https://www.shoal.gg/p/bringing-macro-markets-onchain-with",
+  "source": "Shoal Research",
+  "topics": [
+   "defi"
+  ],
+  "with": [
+   "Gabe Tramble"
+  ]
+ },
+ {
+  "title": "Particle Network: The Chain Abstraction Layer",
+  "date": "2024-08-07",
+  "url": "https://www.shoal.gg/p/particle-network-the-chain-abstraction",
+  "source": "Shoal Research",
+  "topics": [
+   "interoperability"
+  ],
+  "with": []
+ },
+ {
+  "title": "The 0-1 of Chain Abstraction",
+  "date": "2024-05-30",
+  "url": "https://www.shoal.gg/p/the-0-1-of-chain-abstraction",
+  "source": "Shoal Research",
+  "topics": [
+   "interoperability"
+  ],
+  "with": [
+   "imajinl"
+  ]
+ },
+ {
+  "title": "2024 Shoal Research Watchlist",
+  "date": "2024-02-27",
+  "url": "https://www.shoal.gg/p/2024-shoal-research-watchlist",
+  "source": "Shoal Research",
+  "topics": [
+   "ai",
+   "defi",
+   "infrastructure"
+  ],
+  "with": [
+   "Gabe Tramble"
+  ]
+ }
+]

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --page: #f7f7f5;
+  --raised: #efefec;
+  --ink: #1a1a1a;
+  --ink-2: #474747;
+  --muted: #7a7a7a;
+  --line: #e0e0dc;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --page: #191919;
+  --raised: #202020;
+  --ink: #ededed;
+  --ink-2: #b4b4b4;
+  --muted: #7d7d7d;
+  --line: #2c2c2c;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-raised: var(--raised);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono-face);
+}
+
+body { background: var(--page); color: var(--ink); }
+a { text-underline-offset: 3px; }
+
+/* Headshot is a cutout (transparent background); fade the bottom edge where the shirt is cropped. */
+.photo {
+  -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+}
