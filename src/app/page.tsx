@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site, projects, dataWork } from "@/content/site";
+import { site, projects, dataWork, experiments } from "@/content/site";
 import writing from "@/content/writing.json";
 import featured from "@/content/featured.json";
 import Archive from "@/components/archive";
@@ -75,6 +75,24 @@ export default function Home() {
                   ))}
               </ul>
             </section>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-20">
+        <h2 className="text-[20px] font-semibold">Experiments</h2>
+        <p className="mt-1 text-[14px] text-ink-2">Prototypes I build to test an idea.</p>
+        <div className="mt-5 grid gap-4 md:grid-cols-2">
+          {experiments.map((p) => (
+            <article key={p.title} className="border border-line p-5">
+              <h3 className="text-[17px] font-semibold">{p.title}</h3>
+              <p className="mt-2 text-[14px] leading-relaxed text-ink-2">{p.summary}</p>
+              <p className="mt-3 font-mono text-[11.5px] text-muted">{p.tags.join(" / ")}</p>
+              <div className="mt-4 flex gap-5 text-[13px]">
+                {p.live && <a href={p.live} className="underline">Demo</a>}
+                {p.repo && <a href={p.repo} className="underline">Code</a>}
+              </div>
+            </article>
           ))}
         </div>
       </section>

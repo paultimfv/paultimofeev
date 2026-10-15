@@ -59,6 +59,17 @@ export const projects: Project[] = [
   },
 ];
 
+// Experiments: prototypes built to test an idea. Shown after the Data section.
+export const experiments: Project[] = [
+  {
+    title: "x402 any-token",
+    summary: "Paying x402 APIs with whatever token you hold. One Permit2 signature; a small contract swaps through Uniswap so the merchant still receives exact USDC. Works end-to-end on a Base fork; the hosted demo is a simulation.",
+    tags: ["Solidity", "TypeScript", "Permit2", "Uniswap V3"],
+    live: "https://x402-anytoken.vercel.app",
+    repo: "https://github.com/paultimfv/x402-anytoken",
+  },
+];
+
 // All data work, listed under the project cards. Grouped by year (newest first), then sorted by date.
 // Dates as "YYYY" or "YYYY-MM". Set `year` to override the group heading (e.g. a span like "2024–2025").
 export type DataWork = { title: string; date: string; year?: string; kind: "Dune" | "Python" | "Claude skills"; url: string };
