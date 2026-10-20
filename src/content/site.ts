@@ -189,7 +189,8 @@ export const impact = {
 
   hyperlane: {
     role: "Hyperlane",
-    summary: "Technical Content Lead, Oct 2024 to Apr 2025",
+    summary: "Technical Content Lead",
+    period: "Oct 2024 to Apr 2025",
     url: "https://medium.com/hyperlane",
     totals: [
       { value: "21", label: "posts" },
