@@ -76,17 +76,24 @@ export const projects: Project[] = [
 ];
 
 // Projects: demos and experiments. Shown at the bottom of the Work page, after All writing.
-export const experiments: Project[] = [
+// `flow` is drawn as a schematic, left to right; the last step is the outcome. `status` sits under it.
+export type Experiment = Project & { flow: string[]; status: string };
+
+export const experiments: Experiment[] = [
   {
     title: "x402 any-token",
-    summary: "Paying x402 APIs with whatever token you hold. One Permit2 signature; a small contract swaps through Uniswap so the merchant still receives exact USDC. Works end-to-end on a Base fork; the hosted demo is a simulation.",
+    summary: "Paying x402 APIs with whatever token you hold.",
+    flow: ["Any token in your wallet", "One Permit2 signature", "Contract swaps through Uniswap", "Merchant receives exact USDC"],
+    status: "Works end-to-end on a Base fork; the hosted demo is a simulation.",
     tags: ["Solidity", "TypeScript", "Permit2", "Uniswap V3"],
     live: "https://x402-anytoken.vercel.app",
     repo: "https://github.com/paultimfv/x402-anytoken",
   },
   {
     title: "memebot",
-    summary: "An experiment in trading memecoins in the first minute after launch: skip likely rugs, buy small at tiny market caps, sell when wallet activity turns. Work in progress; the hosted demo runs the strategy on a simulated launchpad.",
+    summary: "An experiment in trading memecoins in the first minute after launch.",
+    flow: ["Token launches", "Skip likely rugs", "Buy small at a tiny market cap", "Sell when wallet activity turns"],
+    status: "Work in progress; the hosted demo runs the strategy on a simulated launchpad.",
     tags: ["TypeScript", "Simulation"],
     live: "https://memebot-zeta.vercel.app",
     repo: "https://github.com/paultimfv/memebot",

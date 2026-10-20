@@ -5,6 +5,7 @@ import featured from "@/content/featured.json";
 import Archive from "@/components/archive";
 import Bookshelf from "@/components/bookshelf";
 import DataTable from "@/components/data-table";
+import Experiments from "@/components/experiments";
 
 export default function Home() {
   return (
@@ -27,14 +28,9 @@ export default function Home() {
       </section>
 
       <section className="mt-20">
-        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:gap-12">
-          <div>
-            <h2 className="text-[20px] font-semibold">Featured writing</h2>
-            <p className="mt-2 max-w-[34ch] text-[14px] leading-relaxed text-ink-2">The {featured.length} pieces I&rsquo;d start with, oldest on the top shelf. Pull one out to open it.</p>
-          </div>
-          {/* The featured title wins over the archive's, so a piece can be shelved under a shorter name. */}
-          <Bookshelf pieces={featured.map((f) => ({ source: "", ...writing.find((w) => w.url === f.url), ...f }))} />
-        </div>
+        <h2 className="text-[20px] font-semibold">Featured writing</h2>
+        {/* The featured title wins over the archive's, so a piece can be shelved under a shorter name. */}
+        <Bookshelf pieces={featured.map((f) => ({ source: "", ...writing.find((w) => w.url === f.url), ...f }))} />
       </section>
 
       <section className="mt-20">
@@ -51,19 +47,7 @@ export default function Home() {
       <section className="mt-20">
         <h2 className="text-[20px] font-semibold">Projects</h2>
         <p className="mt-1 text-[14px] text-ink-2">Demos and experiments, built to test ideas.</p>
-        <div className="mt-5 grid gap-4 md:grid-cols-2">
-          {experiments.map((p) => (
-            <article key={p.title} className="border border-line p-5">
-              <h3 className="text-[17px] font-semibold">{p.title}</h3>
-              <p className="mt-2 text-[14px] leading-relaxed text-ink-2">{p.summary}</p>
-              <p className="mt-3 font-mono text-[11.5px] text-muted">{p.tags.join(" / ")}</p>
-              <div className="mt-4 flex gap-5 text-[13px]">
-                {p.live && <a href={p.live} className="underline">Demo</a>}
-                {p.repo && <a href={p.repo} className="underline">Code</a>}
-              </div>
-            </article>
-          ))}
-        </div>
+        <Experiments items={experiments} />
       </section>
     </>
   );
