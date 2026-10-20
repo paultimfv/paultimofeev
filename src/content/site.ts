@@ -142,7 +142,7 @@ export const timeline: Entry[] = [
   { kind: "work", org: "Shoal Research", title: "Research Lead", start: "2025" },
 ];
 
-// About page paragraphs, shown above the timeline.
+// Experience page paragraphs, shown above the timeline.
 export const about: string[] = [];
 
 // Impact page, top to bottom.

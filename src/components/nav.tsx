@@ -6,7 +6,7 @@ import ThemeToggle from "./theme-toggle";
 const tabs = [
   { href: "/", label: "Work" },
   { href: "/impact", label: "Impact" },
-  { href: "/about", label: "About" },
+  { href: "/experience", label: "Experience" },
 ];
 
 export default function Nav() {
