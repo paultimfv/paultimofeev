@@ -75,7 +75,7 @@ export default function Impact() {
         {collaborators.map((c, i) => (
           <span key={c}>
             <span className="inline-flex items-baseline gap-2 whitespace-nowrap">{logoFor(c) && <span className="self-center"><Logo name={c} /></span>}{c}</span>
-            <span className="text-muted">{i < collaborators.length - 1 ? ", " : " and others."}</span>
+            {i < collaborators.length - 1 && <span className="text-muted">, </span>}
           </span>
         ))}
       </p>
