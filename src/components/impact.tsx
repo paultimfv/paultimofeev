@@ -1,5 +1,6 @@
 import { impact } from "@/content/site";
 import { logoFor } from "@/content/logos";
+import Collaborators from "@/components/collaborators";
 
 const H2 = ({ children }: { children: React.ReactNode }) => <h2 className="mt-20 text-[20px] font-semibold">{children}</h2>;
 const Name = ({ title, url }: { title: string; url?: string }) => (url ? <a href={url} className="hover:underline">{title}</a> : <>{title}</>);
@@ -71,14 +72,7 @@ export default function Impact() {
       <h1 className="text-[30px] font-semibold tracking-tight">Impact</h1>
 
       <h2 className="mt-10 text-[13px] text-muted">Collaborated with</h2>
-      <p className="mt-3 max-w-[60ch] text-[20px] leading-[2] md:text-[24px]">
-        {collaborators.map((c, i) => (
-          <span key={c}>
-            <span className="inline-flex items-baseline gap-2 whitespace-nowrap">{logoFor(c) && <span className="self-center"><Logo name={c} /></span>}{c}</span>
-            {i < collaborators.length - 1 && <span className="text-muted">, </span>}
-          </span>
-        ))}
-      </p>
+      <Collaborators names={collaborators} />
 
       <H2>Shoal Research</H2>
       <p className="mt-1 text-[14px] text-ink-2">{growth.caption}. Hollow dot is where each channel started.</p>
