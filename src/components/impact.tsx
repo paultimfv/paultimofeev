@@ -78,6 +78,10 @@ function Reach({ groups }: { groups: typeof impact.top }) {
 export default function Impact() {
   const { collaborators, client, top, growth, hyperlane } = impact;
   const [posts, ...rest] = hyperlane.totals;
+  // Share of views that were read to the end, from Medium's own view and read counts.
+  const value = (label: string) => num(hyperlane.totals.find((t) => t.label === label)!.value);
+  // Views are a lower bound ("14k+"), so round down rather than overstate.
+  const readThrough = Math.floor((value("reads") / value("views")) * 100);
   return (
     <>
       <h1 className="text-[30px] font-semibold tracking-tight">Impact</h1>
@@ -94,10 +98,11 @@ export default function Impact() {
 
       <H2>{hyperlane.role}</H2>
       <p className="mt-1 text-[14px] text-ink-2">{hyperlane.summary}</p>
-      <p className="mt-5 max-w-[46ch] text-[22px] leading-[1.6] text-ink-2 md:text-[26px]">
-        <span className="font-semibold text-ink">{posts.value}</span> {posts.label} on <a href={hyperlane.url} className="text-ink underline decoration-line underline-offset-4 hover:decoration-muted">Hyperlane&rsquo;s Medium</a>, with{" "}
+      <p className="mt-5 max-w-[52ch] text-[22px] leading-[1.6] text-ink-2 md:text-[26px]">
+        <span className="font-semibold text-ink">~{readThrough}%</span> read-through across <span className="font-semibold text-ink">{posts.value}</span> {posts.label} on{" "}
+        <a href={hyperlane.url} className="text-ink underline decoration-line underline-offset-4 hover:decoration-muted">Hyperlane&rsquo;s Medium</a> in six months:{" "}
         {rest.map((t, i) => (
-          <span key={t.label}><span className="font-semibold text-ink">{t.value}</span> {t.label}{i < rest.length - 2 ? ", " : i === rest.length - 2 ? " and " : "."}</span>
+          <span key={t.label}><span className="font-semibold text-ink">{t.value}</span> {t.label}{i < rest.length - 2 ? ", " : i === rest.length - 2 ? ", " : "."}</span>
         ))}
       </p>
 

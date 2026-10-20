@@ -193,7 +193,7 @@ export const impact = {
     url: "https://medium.com/hyperlane",
     totals: [
       { value: "21", label: "posts" },
-      { value: "17k+", label: "presentations" },
+      { value: "17k+", label: "impressions" },
       { value: "14k+", label: "views" },
       { value: "4.3k", label: "reads" },
     ],
