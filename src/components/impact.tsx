@@ -71,7 +71,7 @@ export default function Impact() {
     <>
       <h1 className="text-[30px] font-semibold tracking-tight">Impact</h1>
 
-      <h2 className="mt-10 text-[13px] text-muted">Collaborated with</h2>
+      <h2 className="mt-12 text-[20px] font-semibold">Collaborated with</h2>
       <Collaborators names={collaborators} />
 
       <H2>Shoal Research</H2>
