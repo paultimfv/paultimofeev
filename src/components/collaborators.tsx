@@ -9,7 +9,7 @@ const Mark = ({ name, size }: { name: string; size: number }) => {
     : <span className="grid flex-none place-items-center rounded-full bg-raised font-serif text-ink-2 ring-1 ring-line" style={{ width: size, height: size, fontSize: size * 0.36 }}>{name.split(" ").map((w) => w[0]).join("")}</span>;
 };
 
-// Every name links back to the writing at the centre, not to me: they reposted, reviewed or worked on a piece.
+// Everyone who reposted, reviewed or worked on a piece, linked to a small headshot at the centre.
 // Nodes alternate between two ellipses so neighbouring labels don't collide. Lines draw out once on load.
 export default function Collaborators({ names }: { names: string[] }) {
   const [hover, setHover] = useState<string | null>(null);
@@ -29,10 +29,8 @@ export default function Collaborators({ names }: { names: string[] }) {
               className={`collab-line${hover === n.name ? " on" : ""}`} style={{ animationDelay: `${i * 45}ms` }} />
           ))}
         </svg>
-        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-2">
-          <span className="h-4 w-4 rounded-full bg-ink ring-4 ring-page" />
-          <span className="rounded bg-page px-2 font-serif text-[16px] italic text-ink">My writing</span>
-        </div>
+        <img src="/paul.png" alt="Paul Timofeev" width={44} height={44}
+          className="absolute left-1/2 top-1/2 h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full bg-raised object-cover object-top ring-4 ring-page" />
         {nodes.map((n, i) => (
           <div key={n.name} onMouseEnter={() => setHover(n.name)} onMouseLeave={() => setHover(null)}
             className={`collab-node absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1.5${hover && hover !== n.name ? " dim" : ""}`}
