@@ -3,6 +3,7 @@ import { site, projects, dataWork, experiments } from "@/content/site";
 import writing from "@/content/writing.json";
 import featured from "@/content/featured.json";
 import Archive from "@/components/archive";
+import Bookshelf from "@/components/bookshelf";
 
 export default function Home() {
   return (
@@ -26,16 +27,7 @@ export default function Home() {
 
       <section className="mt-20">
         <h2 className="text-[20px] font-semibold">Featured writing</h2>
-        <ul className="mt-5 grid gap-4 md:grid-cols-2">
-          {featured.map((w) => (
-            <li key={w.url}>
-              <a href={w.url} className="block h-full border border-line p-5 hover:bg-raised">
-                <span className="font-mono text-[12px] text-muted">{w.date.slice(0, 7)}</span>
-                <span className="mt-2 block text-[17px] font-semibold leading-snug">{w.title}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <Bookshelf pieces={featured.map((f) => ({ ...f, source: "", with: [], ...writing.find((w) => w.url === f.url) }))} />
       </section>
 
       <section className="mt-20">
