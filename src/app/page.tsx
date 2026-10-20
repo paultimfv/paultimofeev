@@ -27,8 +27,14 @@ export default function Home() {
       </section>
 
       <section className="mt-20">
-        <h2 className="text-[20px] font-semibold">Featured writing</h2>
-        <Bookshelf pieces={featured.map((f) => ({ ...f, source: "", ...writing.find((w) => w.url === f.url) }))} />
+        <div className="grid gap-6 md:grid-cols-[1fr_auto] md:gap-12">
+          <div>
+            <h2 className="text-[20px] font-semibold">Featured writing</h2>
+            <p className="mt-2 max-w-[34ch] text-[14px] leading-relaxed text-ink-2">The {featured.length} pieces I&rsquo;d start with, oldest on the top shelf. Pull one out to open it.</p>
+          </div>
+          {/* The featured title wins over the archive's, so a piece can be shelved under a shorter name. */}
+          <Bookshelf pieces={featured.map((f) => ({ source: "", ...writing.find((w) => w.url === f.url), ...f }))} />
+        </div>
       </section>
 
       <section className="mt-20">

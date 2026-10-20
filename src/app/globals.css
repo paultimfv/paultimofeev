@@ -71,8 +71,9 @@ a { text-underline-offset: 3px; }
   flex: none; display: flex; height: var(--h); width: var(--w);
   transition: width 0.45s cubic-bezier(0.3, 0.7, 0.2, 1), transform 0.35s ease;
   filter: drop-shadow(2px 0 2px rgba(0, 0, 0, 0.35));
+  position: relative;
 }
-.book.open { width: calc(var(--w) + var(--cover)); }
+.book.open { z-index: 10; filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.5)); }
 
 .spine {
   flex: none; width: var(--w); height: 100%;
@@ -110,7 +111,7 @@ a { text-underline-offset: 3px; }
 }
 
 /* The one paperback: plain stock, black type, leaning on the bookend. */
-.paperback { margin-left: 24px; transform-origin: bottom right; transform: rotate(7deg); }
+.paperback { margin-left: 14px; transform-origin: bottom right; transform: rotate(7deg); }
 .paperback.open { transform: none; }
 .paperback .spine { color: #1f1f1f; --cloth: #d9d3c3; border-radius: 1px; }
 .paperback .spine::before, .paperback .spine::after { display: none; }
@@ -127,10 +128,12 @@ a { text-underline-offset: 3px; }
     repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px),
     var(--cloth);
   border-radius: 1px 3px 3px 1px;
+  position: absolute; top: 0; left: 100%;
   transform-origin: left center; transform: rotateY(-88deg);
   opacity: 0; pointer-events: none;
   transition: transform 0.45s cubic-bezier(0.3, 0.7, 0.2, 1), opacity 0.2s ease;
 }
+.opens-left .cover { left: auto; right: 100%; transform-origin: right center; transform: rotateY(88deg); border-radius: 3px 1px 1px 3px; }
 .open .cover { transform: none; opacity: 1; pointer-events: auto; }
 .cover-title { font-size: 24px; line-height: 1.15; font-weight: 500; text-wrap: balance; }
 .cover-meta { font-size: 13px; line-height: 1.45; opacity: .8; }

@@ -5,7 +5,7 @@ type Piece = { title: string; date: string; url: string; source: string };
 
 // Cloth colours for the Shoal series; the Medium piece is a paperback and gets its own look.
 const cloths = ["#2f4a3e", "#2c3b52", "#5b2e2b", "#6b5a3a", "#3b3f3a"];
-const COVER_W = 270, GAP = 3, PAD = 20, BOOKEND = 12, LEAN = 24;
+const COVER_W = 250, GAP = 3, PAD = 20, BOOKEND = 12, LEAN = 24;
 
 // Stable pseudo-random from the title so spine heights don't jump between renders.
 const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
@@ -25,9 +25,12 @@ export default function Bookshelf({ pieces }: { pieces: Piece[] }) {
   const books = [...pieces].sort((a, b) => (!a.date ? 1 : !b.date ? -1 : a.date.localeCompare(b.date))).map((b, i) => ({ ...b, ...measure(b), cloth: cloths[i % cloths.length] }));
   const half = Math.ceil(books.length / 2);
   const shelves = [books.slice(0, half), books.slice(half)];
-  // Leave room on every shelf for one book to open, so the case never changes size.
+  // The case is sized to the books; an opened cover swings out over its neighbours instead of pushing them.
   const rowWidth = (row: typeof books) => row.reduce((w, b) => w + b.width + GAP, 0) + (row.some((b) => b.source !== "Shoal Research") ? LEAN : 0);
-  const caseWidth = Math.max(...shelves.map(rowWidth)) + COVER_W + BOOKEND + PAD * 2;
+  const caseWidth = Math.max(...shelves.map(rowWidth)) + BOOKEND + PAD * 2 + 28;
+
+  // A cover opens to the right unless that would run past the case, so it never gets clipped.
+  const opensLeft = (row: typeof books, i: number) => PAD + 14 + row.slice(0, i + 1).reduce((w, b) => w + b.width + GAP, 0) + COVER_W > caseWidth;
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(null);
@@ -49,14 +52,14 @@ export default function Bookshelf({ pieces }: { pieces: Piece[] }) {
         {shelves.map((row, r) => (
           <div key={r} className="shelf">
             <div className="shelf-row">
-              {row.map((b) => {
+              {row.map((b, i) => {
                 const paperback = b.source !== "Shoal Research";
                 const isOpen = open === b.url;
                 return (
                   <div
                     key={b.url}
                     data-url={b.url}
-                    className={`book${paperback ? " paperback" : ""}${isOpen ? " open" : ""}`}
+                    className={`book${paperback ? " paperback" : ""}${opensLeft(row, i) ? " opens-left" : ""}${isOpen ? " open" : ""}`}
                     style={{ "--cloth": b.cloth, "--h": `${b.height}px`, "--w": `${b.width}px`, "--cover": `${COVER_W}px` } as React.CSSProperties}
                   >
                     <button
