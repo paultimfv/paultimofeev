@@ -14,13 +14,15 @@ export const site = {
   ],
 };
 
-export type Project = { title: string; summary: string; tags: string[]; live?: string; repo?: string };
+// `chains` shows as logos in the Data table; a number stands in when there are too many to list.
+export type Project = { title: string; summary: string; tags: string[]; chains?: (string | number)[]; live?: string; repo?: string };
 
 export const projects: Project[] = [
   {
     title: "x402 on Base",
     summary: "x402 USDC payments on Base across four sample weeks, decoded from raw logs: who gets paid, by whom, at what price, and through which facilitator.",
     tags: ["Python", "DuckDB", "Infura", "Next.js"],
+    chains: ["Base"],
     live: "https://x402-activity.paultimofeev.com",
     repo: "https://github.com/paultimfv/x402-base-activity",
   },
@@ -28,6 +30,7 @@ export const projects: Project[] = [
     title: "ORE",
     summary: "Every ORE mining round and buyback since October 2025, decoded from Solana: SOL deployed, protocol revenue, ORE minted and burned.",
     tags: ["Python", "Helius", "Next.js"],
+    chains: ["Solana"],
     live: "https://ore-dashboard-beige.vercel.app",
     repo: "https://github.com/paultimfv/ore-research",
   },
@@ -35,6 +38,7 @@ export const projects: Project[] = [
     title: "Collector Crypt",
     summary: "Gacha pack sales, card buybacks and the CARDS buyback and burn, from every stablecoin transfer through the gacha wallet on Solana, Base and Robinhood Chain.",
     tags: ["Python", "Helius", "Alchemy", "Next.js"],
+    chains: ["Solana", "Base", "Robinhood"],
     live: "https://collector-crypt-dashboard-delta.vercel.app",
     repo: "https://github.com/paultimfv/collector-crypt-research",
   },
@@ -42,6 +46,7 @@ export const projects: Project[] = [
     title: "Laso Finance",
     summary: "Stablecoin deposits across 7 chains and x402 agent payments, pulled from chain data and checked against Laso's own reported volume.",
     tags: ["Python", "Alchemy", "Helius", "Blockscout", "Next.js"],
+    chains: [7],
     live: "https://laso.paultimofeev.com",
     repo: "https://github.com/paultimfv/laso-finance",
   },
@@ -49,6 +54,7 @@ export const projects: Project[] = [
     title: "Maple Finance",
     summary: "Revenue, AUM, lenders and borrowers rebuilt from 239 contracts on Ethereum and Robinhood Chain.",
     tags: ["Python", "Postgres", "GitHub Actions", "Next.js"],
+    chains: ["Ethereum", "Robinhood"],
     live: "https://maple.paultimofeev.com",
     repo: "https://github.com/paultimfv/maple-pipeline",
   },
@@ -56,6 +62,7 @@ export const projects: Project[] = [
     title: "Robinhood Earn",
     summary: "Robinhood Chain activity, Robinhood Earn flows, and who gets paid across the stack.",
     tags: ["Postgres", "DeFiLlama", "Next.js"],
+    chains: ["Robinhood"],
     live: "https://robinhood.paultimofeev.com",
     repo: "https://github.com/paultimfv/robinhood-earn",
   },
@@ -136,8 +143,8 @@ type Item = { title: string; url?: string; stat: string };
 const ML = "https://medium.com/hyperlane/";
 
 export const impact = {
-  repostedBy: ["Circle", "Coinbase Developer Platform", "Zama", "Andre Cronje", "Jeremy Allaire", "Plasma", "Jito", "EigenLayer", "Particle Network"],
-  reviewedBy: ["Cloudflare", "Visa", "Circle", "Coinbase", "x402 Foundation", "Altitude", "Anza", "Pantera Capital", "LI.FI"],
+  // People and organizations who reposted, reviewed or worked on pieces with me. People show without a logo.
+  collaborators: ["Circle", "Coinbase", "Coinbase Developer Platform", "Cloudflare", "Visa", "x402 Foundation", "Zama", "Plasma", "Jito", "EigenLayer", "Particle Network", "Anza", "Altitude", "Pantera Capital", "LI.FI", "Andre Cronje", "Jeremy Allaire"],
 
   client: {
     name: "Particle Network",
@@ -150,9 +157,10 @@ export const impact = {
   },
 
   top: [
-    { label: "Most views", items: [{ title: "MEV-Protection with DEX Aggregators", url: "https://www.shoal.gg/p/mev-protection-dex-and-aggregator", stat: "100k+ views on Substack" }] },
+    { label: "Most views", where: "Substack", items: [{ title: "MEV-Protection with DEX Aggregators", url: "https://www.shoal.gg/p/mev-protection-dex-and-aggregator", stat: "100k+ views on Substack" }] },
     {
       label: "Most impressions on X",
+      where: "X",
       items: [
         { title: "Flying Tulip", stat: "79k impressions" },
         { title: "APR vs APY", url: "https://twitter.com/pt1mfv_/status/1626270688280739840", stat: "77k views, 349 likes" },
@@ -160,8 +168,8 @@ export const impact = {
         { title: "Compute Is The New Oil", stat: "54k impressions" },
       ],
     },
-    { label: "Most read on Medium", items: [{ title: "Latency and Profits: MEV on Solana", url: "https://paultimofeev.medium.com/latency-and-profits-mev-on-solana-defe9a05011a", stat: "6.4k views, 2.9k reads, 202 claps" }] },
-  ] as { label: string; items: Item[] }[],
+    { label: "Most read on Medium", where: "Medium", items: [{ title: "Latency and Profits: MEV on Solana", url: "https://paultimofeev.medium.com/latency-and-profits-mev-on-solana-defe9a05011a", stat: "6.4k views, 2.9k reads, 202 claps" }] },
+  ] as { label: string; where: string; items: Item[] }[],
 
   growth: {
     caption: "Audience since I joined in Nov 2023",

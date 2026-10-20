@@ -41,23 +41,30 @@ a { text-underline-offset: 3px; }
   mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
 }
 
-/* Featured writing bookshelf. Books are cloth-bound; the gilt and cloth colours stay the same in both themes. */
-:root { --plank: #d9d5cc; --plank-edge: #c7c2b7; --wall: #ecebe7; }
-[data-theme="dark"] { --plank: #2b2926; --plank-edge: #22201e; --wall: #1d1d1d; }
+/* Featured writing bookcase. Cloth and gilt colours stay the same in both themes; the wood follows the theme. */
+:root { --wood: #cfc8bb; --wood-edge: #b9b1a2; --wall: #e6e3dc; }
+[data-theme="dark"] { --wood: #4a3f33; --wood-edge: #3a3128; --wall: #141414; }
 
-.bookshelf { --gilt: #d9c08a; position: relative; }
+.bookcase-scroll { overflow-x: auto; scrollbar-width: none; }
+.bookcase-scroll::-webkit-scrollbar { display: none; }
+.bookcase {
+  --gilt: #e6d3a2;
+  padding: 0 14px; border-top: 14px solid var(--wood); border-radius: 3px 3px 0 0;
+  background: linear-gradient(90deg, var(--wood-edge) 0 14px, transparent 14px calc(100% - 14px), var(--wood-edge) calc(100% - 14px));
+}
+.shelf { background: var(--wall); }
+/* Each shelf casts a shadow onto the back wall below it; the plank is the bottom edge. */
 .shelf-row {
   display: flex; align-items: flex-end; gap: 3px;
-  min-height: 300px; padding: 28px 20px 0;
-  overflow-x: auto; overflow-y: hidden; perspective: 1400px;
-  background: linear-gradient(to bottom, transparent, var(--wall));
-  scrollbar-width: none;
+  min-height: 312px; padding: 0 20px;
+  box-shadow: inset 0 18px 18px -14px rgba(0, 0, 0, 0.55);
+  border-bottom: 16px solid var(--wood);
+  perspective: 1400px;
+  position: relative;
 }
-.shelf-row::-webkit-scrollbar { display: none; }
-.plank {
-  height: 16px;
-  background: linear-gradient(to bottom, var(--plank) 0 5px, var(--plank-edge) 5px);
-  box-shadow: 0 10px 18px -8px rgba(0, 0, 0, 0.45);
+.shelf-row::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -16px; height: 5px;
+  background: rgba(255, 255, 255, 0.06); pointer-events: none;
 }
 
 .book {
@@ -73,7 +80,7 @@ a { text-underline-offset: 3px; }
   padding: 14px 0 12px; cursor: pointer;
   font-family: var(--font-serif); color: var(--gilt);
   background:
-    linear-gradient(90deg, rgba(0,0,0,.35), rgba(255,255,255,.07) 22%, transparent 55%, rgba(0,0,0,.28)),
+    linear-gradient(90deg, rgba(0,0,0,.32), rgba(255,255,255,.07) 22%, transparent 55%, rgba(0,0,0,.26)),
     repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px),
     var(--cloth);
   border-radius: 2px 1px 1px 2px;
@@ -82,31 +89,32 @@ a { text-underline-offset: 3px; }
 }
 /* Gilt rules near the head and tail of each spine, the series' house style. */
 .spine::before, .spine::after {
-  content: ""; position: absolute; left: 5px; right: 5px; height: 3px;
-  border-top: 1px solid var(--gilt); border-bottom: 1px solid var(--gilt); opacity: .55;
+  content: ""; position: absolute; left: 6px; right: 6px; height: 3px;
+  border-top: 1px solid var(--gilt); border-bottom: 1px solid var(--gilt); opacity: .5;
 }
-.spine::before { top: 36px; }
-.spine::after { bottom: 34px; }
-.book:not(.open) .spine:hover { transform: translateY(-8px); }
+.spine::before { top: 38px; }
+.spine::after { bottom: 36px; }
+.book:not(.open) .spine:hover { transform: translateY(-10px); }
 .spine:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
-.spine-year { font-size: 11px; letter-spacing: .04em; opacity: .85; min-height: 14px; }
+.spine-year { font-size: 12px; letter-spacing: .03em; opacity: .85; min-height: 15px; }
 .spine-title {
-  flex: 1; min-height: 0; margin-top: 10px;
+  flex: 1; min-height: 0; margin-top: 12px;
   writing-mode: vertical-rl; text-align: center;
-  font-size: 13.5px; line-height: 1.15; font-weight: 500; letter-spacing: .01em;
+  font-size: 16px; line-height: 1.2; font-weight: 500;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
 }
 .spine-mark {
-  margin-top: 8px; width: 18px; height: 18px; display: grid; place-items: center;
+  margin-top: 10px; width: 18px; height: 18px; display: grid; place-items: center;
   border: 1px solid currentColor; border-radius: 50%; font-size: 10px; font-style: italic; opacity: .8;
 }
 
 /* The one paperback: plain stock, black type, leaning on the bookend. */
-.paperback { margin-left: 18px; transform-origin: bottom right; transform: rotate(6deg); }
+.paperback { margin-left: 24px; transform-origin: bottom right; transform: rotate(7deg); }
 .paperback.open { transform: none; }
 .paperback .spine { color: #1f1f1f; --cloth: #d9d3c3; border-radius: 1px; }
 .paperback .spine::before, .paperback .spine::after { display: none; }
-.paperback .spine-title { font-style: italic; font-weight: 400; }
+.paperback .spine-title { font-style: italic; font-weight: 400; text-shadow: none; }
 .paperback .cover { --cloth: #d9d3c3; color: #1f1f1f; }
 
 .cover {
@@ -124,8 +132,7 @@ a { text-underline-offset: 3px; }
   transition: transform 0.45s cubic-bezier(0.3, 0.7, 0.2, 1), opacity 0.2s ease;
 }
 .open .cover { transform: none; opacity: 1; pointer-events: auto; }
-.cover-title { font-size: 23px; line-height: 1.15; font-weight: 500; text-wrap: balance; }
-.cover-with { margin-top: 10px; font-size: 14px; font-style: italic; opacity: .8; }
+.cover-title { font-size: 24px; line-height: 1.15; font-weight: 500; text-wrap: balance; }
 .cover-meta { font-size: 13px; line-height: 1.45; opacity: .8; }
 .cover-link {
   display: inline-block; margin-top: 12px; font-size: 15px;
