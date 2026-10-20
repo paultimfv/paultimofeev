@@ -45,22 +45,33 @@ function Growth({ stats }: { stats: typeof impact.growth.stats }) {
   );
 }
 
-// Best performers ranked on one linear axis; each bar is labelled with the platform and the metric it was measured by.
+// Best performers, one column per platform. Platforms aren't ranked against each other: a Medium read and an X impression aren't the same thing.
+const platformLogos: Record<string, string> = { Substack: "/logos/substack.jpg", X: "/logos/x.png", Medium: "/logos/medium.svg" };
+
 function Reach({ groups }: { groups: typeof impact.top }) {
-  const items = groups.flatMap((g) => g.items.map((it) => ({ ...it, where: g.where, n: num(it.stat) }))).sort((a, b) => b.n - a.n);
-  const max = items[0].n;
   return (
-    <ol className="mt-8 space-y-6">
-      {items.map((it) => (
-        <li key={it.title}>
-          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-            <span className="text-[15px]"><Name {...it} /></span>
-            <span className="text-[13px] text-ink-2">{it.stat}{!it.stat.includes(it.where) && <span className="text-muted">, {it.where}</span>}</span>
-          </div>
-          <div className="mt-2 h-1.5 rounded-full bg-ink" style={{ width: `max(6px, ${(it.n / max) * 100}%)` }} />
-        </li>
+    <div className="mt-8 grid gap-10 md:grid-cols-3 md:gap-0">
+      {groups.map((g, gi) => (
+        <section key={g.where} className={gi > 0 ? "md:border-l md:border-line md:pl-8" : "md:pr-8"}>
+          <h3 className="flex items-center gap-2.5 text-[15px] font-semibold">
+            <img src={platformLogos[g.where]} alt="" width={22} height={22} className="rounded-full ring-1 ring-line" />{g.where}
+          </h3>
+          <ul className="mt-5 space-y-6">
+            {g.items.map((it) => {
+              const [lead, ...rest] = it.stat.replace(/ on \w+$/, "").split(", ");
+              return (
+                <li key={it.title}>
+                  <p className="text-[30px] font-semibold leading-none tracking-tight">{lead.split(" ")[0]}<span className="ml-2 text-[14px] font-normal tracking-normal text-ink-2">{lead.split(" ").slice(1).join(" ")}</span></p>
+                  {rest.length > 0 && <p className="mt-1.5 text-[13px] text-ink-2">{rest.join(", ")}</p>}
+                  <p className="mt-2 text-[15px]"><Name {...it} /></p>
+                  {it.note && <p className="mt-0.5 text-[13px] text-muted">{it.note}</p>}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
       ))}
-    </ol>
+    </div>
   );
 }
 
@@ -75,11 +86,10 @@ export default function Impact() {
       <Collaborators names={collaborators} />
 
       <H2>Shoal Research</H2>
-      <p className="mt-1 text-[14px] text-ink-2">{growth.caption}. Hollow dot is where each channel started.</p>
+      <p className="mt-1 text-[14px] text-ink-2">{growth.caption}</p>
       <Growth stats={growth.stats} />
 
       <H2>Top performing</H2>
-      <p className="mt-1 text-[14px] text-ink-2">Single pieces with the widest reach, across Substack, X and Medium.</p>
       <Reach groups={top} />
 
       <H2>{hyperlane.role}</H2>

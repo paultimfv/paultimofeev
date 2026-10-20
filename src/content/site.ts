@@ -146,7 +146,7 @@ export const timeline: Entry[] = [
 export const about: string[] = [];
 
 // Impact page, top to bottom.
-type Item = { title: string; url?: string; stat: string };
+type Item = { title: string; url?: string; stat: string; note?: string };
 const ML = "https://medium.com/hyperlane/";
 
 export const impact = {
@@ -175,7 +175,7 @@ export const impact = {
         { title: "Compute Is The New Oil", stat: "54k impressions" },
       ],
     },
-    { label: "Most read on Medium", where: "Medium", items: [{ title: "Latency and Profits: MEV on Solana", url: "https://paultimofeev.medium.com/latency-and-profits-mev-on-solana-defe9a05011a", stat: "6.4k views, 2.9k reads, 202 claps" }] },
+    { label: "Most read on Medium", where: "Medium", items: [{ title: "Latency and Profits: MEV on Solana", url: "https://paultimofeev.medium.com/latency-and-profits-mev-on-solana-defe9a05011a", stat: "6.4k views, 2.9k reads, 202 claps", note: "Organic, SEO-driven" }] },
   ] as { label: string; where: string; items: Item[] }[],
 
   growth: {

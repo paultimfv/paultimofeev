@@ -35,7 +35,7 @@ export default function Home() {
 
       <section className="mt-20">
         <h2 className="text-[20px] font-semibold">Data</h2>
-        <p className="mt-1 text-[14px] text-ink-2">Onchain ETL pipelines: raw blockchain data pulled, decoded and loaded into dashboards that refresh daily. Plus Dune dashboards, Python notebooks and research tooling, going back to 2023.</p>
+        <p className="mt-1 text-[14px] text-ink-2">Onchain ETL pipelines: raw blockchain data pulled, decoded and loaded into dashboards that refresh daily.</p>
         <DataTable projects={projects} dataWork={dataWork} />
       </section>
 
